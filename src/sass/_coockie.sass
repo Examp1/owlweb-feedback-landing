@@ -1,0 +1,79 @@
+.coockie-screen, .success-screen
+    background-color: $dark
+    width: 100%
+    height: 100vh
+    display: flex
+    top: 0
+    justify-content: center
+    align-items: center
+    position: fixed
+    z-index: 999
+    @media (max-width: 576px)
+        .title
+            margin: 2px
+        .desc
+            margin: 2px
+    .comment
+        p
+            position: relative
+            &::after
+                content: ''
+                // background: url(../img/svg/noto_fire.svg)
+                width: 18px
+                height: 24px
+                display: inline-block
+                margin-left: 10px
+    .btns
+        @media (max-width: 576px)
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            justify-content: center
+        a
+            font-family: Roboto Condensed
+            font-style: normal
+            font-weight: normal
+            font-size: 13px
+            line-height: 15px
+            text-align: center
+            letter-spacing: 0.2em
+            text-transform: uppercase
+            color: #DDDDDD
+            text-decoration: underline
+            &:last-of-type
+                text-decoration: none
+                margin-left: 80px
+                padding: 19px 25px
+                border: 1px solid rgba(221, 221, 221, 0.5)
+                background: linear-gradient(126.45deg, #EF7095 0%, #E27AC7 100%)
+                @media (max-width: 576px)
+                    margin-left: 0
+                    margin-bottom: 10px
+.success-screen
+    transition: 0.5s
+    .col-l
+        display: flex
+        align-items: flex-end
+        padding-bottom: 90px
+        @media (max-width: 576px)
+            display: none
+    .question
+        position: relative
+    [data-closeSuccess]
+        position: absolute
+        top: 0px
+        right: 0
+        font-size: 50px
+        color: #fff
+        background: rgba(255, 255, 255, 0.2)
+        border-radius: 50px
+        width: 50px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+.coockie-screen
+    .question
+        @media (max-width: 576px)
+            padding: 0px 20px
+            margin-top: 0px

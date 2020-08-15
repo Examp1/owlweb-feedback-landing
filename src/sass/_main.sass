@@ -1,0 +1,182 @@
+.question
+    display: flex
+    margin-top: 13px
+    margin-bottom: 46px
+    @media (max-width: 768px)
+        flex-direction: column
+        padding: 20px 
+    img
+        width: 129px
+        height: 129px
+        border-radius: 50%
+    .col-l
+        width: 129px
+        margin-right: 33px
+        @media (max-width: 768px)
+            height: 129px
+    .col-r
+        .title
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 500
+            font-size: 30px
+            line-height: 160%
+            color: #FFFFFF
+        .desc
+            font-family: Montserrat
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 160%
+            color: #FFFFFF
+        .comment
+            font-family: Montserrat
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 140%
+            margin-top: 33px
+            color: #FFFFFF
+            padding: 15px
+            background-color: rgba(#fff, .2)
+            border-radius: 0px 16px 16px 16px
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                height: 29px
+                width: 18px
+                background: url(../img/png/triangle.png) center/cover no-repeat
+                top: 0
+                left: -18px
+            &:not(:last-of-type)
+                margin-bottom: 10px
+        .social
+            display: flex
+            // justify-content: center
+            width: 100%
+            li
+                width: 51px
+                height: 51px
+                &:not(:last-of-type)
+                    margin-right: 20px
+                a
+                    width: 100%
+                    height: 100%
+                    img
+                        width: 51px
+                        height: 51px
+.wrapper
+    justify-content: center
+.wrapper-container
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    // width: 100%
+    margin-top: 0
+    flex-direction: column
+.main__form
+    background: linear-gradient(126.45deg, #EF7095 0%, #E27AC7 100%)
+    display: flex   
+    flex-direction: column
+    padding: 43px 
+    .title
+        font-family: Roboto Condensed
+        font-style: normal
+        font-weight: bold
+        font-size: 26px
+        line-height: 30px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 0
+    .desc
+        font-family: Montserrat
+        font-style: normal
+        font-weight: normal
+        font-size: 17px
+        line-height: 21px
+        letter-spacing: 0.05em
+        margin-top: 12px
+        color: #FFFFFF
+        margin-bottom: 20px
+    .input-warpp
+        width: 100%
+        position: relative
+        &:not(:last-of-type)
+            margin-bottom: 10px
+        &:focus-within
+            &::before
+                width: 100%
+        &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            width: 0%
+            background-color: #383845
+            height: 2px
+            transition: .3s
+    textarea
+        resize: none
+        max-height: 200px
+        min-height: 100px
+        min-width: 100%
+    input, textarea
+        width: 100%
+        background: rgba(248, 248, 255, 0.3)
+        border: none
+        padding: 18px
+        outline: none 
+        &::placeholder
+            font-family: Montserrat
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #000000
+    [type="submit"]
+        margin-top: 20px
+        font-family: Roboto Condensed
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 15px
+        text-align: center
+        letter-spacing: 0.2em
+        text-transform: uppercase
+        color: #FFFFFF
+        background: #171721
+        cursor: pointer
+        transition: .3s
+        &:hover
+            background-color: #000
+.success-screen
+    display: flex
+    justify-content: center
+    align-items: center
+.success-screen .question
+    justify-content: center
+    height: 100%
+    align-items: center
+.question .col-l
+    margin-top: 20px
+.wrapper-container .question
+    max-width: 630px
+textarea
+    transform: translateY(40px)
+    transition: .5s 
+    position: relative
+    z-index: 2
+input[type="text"]
+    position: relative
+    opacity: 0  
+    transition: .5s
+    z-index: -1
+    transform: translateY(-70px)
+.active-input
+    opacity: 1 !important
+    transform: translateY(0px) !important
+    z-index: 1 !important
+.active-text
+    transform: translateY(0px) !important
